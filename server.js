@@ -22,9 +22,11 @@ const transporter = nodemailer.createTransport({
 
 // Helper to send welcome email
 const sendWelcomeEmail = async (userEmail, userName) => {
+    console.log(`\n📧 Attempting to send welcome email to: ${userEmail}`);
+    console.log(`   From: ${process.env.EMAIL_USER}`);
     try {
         const mailOptions = {
-            from: process.env.EMAIL_USER,
+            from: `"Violet Auth Platform" <${process.env.EMAIL_USER}>`,
             to: userEmail,
             subject: 'Welcome to our Platform! 🚀',
             html: `
@@ -37,10 +39,12 @@ const sendWelcomeEmail = async (userEmail, userName) => {
                 </div>
             `
         };
-        await transporter.sendMail(mailOptions);
-        console.log(`Welcome email sent to: ${userEmail}`);
+        const info = await transporter.sendMail(mailOptions);
+        console.log(`✅ Welcome email sent! Message ID: ${info.messageId}`);
     } catch (error) {
-        console.error('Email Error:', error.message);
+        console.error(`❌ Email FAILED for ${userEmail}:`);
+        console.error(`   Code: ${error.code}`);
+        console.error(`   Message: ${error.message}`);
     }
 };
 

@@ -5,6 +5,18 @@
       "email": "user1234@gmail.com",
       "password": "$2b$10$tlQlyLADS5VfyLm04BBAz.rNPwNU1Yo35iIChsqRE6bZuWHyBuZXO",
       "createdAt": "2026-03-17T22:27:11.961Z"
+    },
+    {
+      "name": "Wasim Rahman",
+      "email": "wasimshergil@gmail.com",
+      "password": "$2b$10$vHQox4SN89eUMbf6qDyi2.c9lj7DmCu1T4WWeFm5AAsAxOoHEQLiq",
+      "createdAt": "2026-03-17T23:11:21.438Z"
+    },
+    {
+      "name": "Wasim Rahman",
+      "email": "rahmanwasim67@gmail.com",
+      "password": "$2b$10$VRP5QWcuJpFpReSW9FCMNeOZL6zVbZBtfY9RZo2tOatJ0kbXdSHL2",
+      "createdAt": "2026-03-17T23:31:35.179Z"
     }
   ]
 }
