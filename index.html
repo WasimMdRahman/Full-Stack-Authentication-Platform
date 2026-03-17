@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Violet Glassmorphism</title>
+    <meta name="description" content="A premium violet glassmorphic sign in page for the Full-Stack Authentication Platform.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Animated Blobs -->
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+
+    <div class="container">
+        <div class="glass-card">
+            <header class="header">
+                <h1>Welcome Back</h1>
+                <p>Please enter your details to sign in</p>
+            </header>
+
+            <form id="signin-form" onsubmit="handleSubmit(event)">
+                <!-- Name Field -->
+                <div class="form-group">
+                    <label for="name">FULL NAME</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        <div class="focus-glow"></div>
+                    </div>
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label for="email">EMAIL ADDRESS</label>
+                    <div class="input-wrapper">
+                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        <div class="focus-glow"></div>
+                    </div>
+                </div>
+
+                <!-- Password Field -->
+                <div class="form-group">
+                    <label for="password">PASSWORD</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="password" name="password" placeholder="••••••••" required>
+                        <div class="focus-glow"></div>
+                    </div>
+                </div>
+
+                <!-- Confirm Password Field -->
+                <div class="form-group">
+                    <label for="confirm-password">CONFIRM PASSWORD</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="••••••••" required>
+                        <div class="focus-glow"></div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submit-btn">Continue to App</button>
+            </form>
+
+            <div class="footer-text">
+                <p>New here? <a href="#">Create an account</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
