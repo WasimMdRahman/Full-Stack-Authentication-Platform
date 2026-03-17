@@ -1,0 +1,10 @@
+{
+  "users": [
+    {
+      "name": "User 1234",
+      "email": "user1234@gmail.com",
+      "password": "$2b$10$tlQlyLADS5VfyLm04BBAz.rNPwNU1Yo35iIChsqRE6bZuWHyBuZXO",
+      "createdAt": "2026-03-17T22:27:11.961Z"
+    }
+  ]
+}

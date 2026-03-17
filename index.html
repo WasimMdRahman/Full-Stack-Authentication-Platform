@@ -18,16 +18,21 @@
     <div class="container">
         <div class="glass-card">
             <header class="header">
-                <h1>Welcome Back</h1>
-                <p>Please enter your details to sign in</p>
+                <h1 id="form-title">Create Account</h1>
+                <p id="form-subtitle">Please enter your details to sign up</p>
             </header>
 
-            <form id="signin-form" onsubmit="handleSubmit(event)">
+            <div class="toggle-container">
+                <button class="toggle-btn active" id="signup-toggle" onclick="setMode('signup')">Sign Up</button>
+                <button class="toggle-btn" id="login-toggle" onclick="setMode('login')">Login</button>
+            </div>
+
+            <form id="auth-form" onsubmit="handleSubmit(event)">
                 <!-- Name Field -->
-                <div class="form-group">
+                <div class="form-group" id="name-group">
                     <label for="name">FULL NAME</label>
                     <div class="input-wrapper">
-                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        <input type="text" id="name" name="name" placeholder="John Doe">
                         <div class="focus-glow"></div>
                     </div>
                 </div>
@@ -51,21 +56,36 @@
                 </div>
 
                 <!-- Confirm Password Field -->
-                <div class="form-group">
+                <div class="form-group" id="confirm-password-group">
                     <label for="confirm-password">CONFIRM PASSWORD</label>
                     <div class="input-wrapper">
-                        <input type="password" id="confirm-password" name="confirm-password" placeholder="••••••••" required>
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="••••••••">
                         <div class="focus-glow"></div>
                     </div>
                 </div>
 
-                <button type="submit" class="submit-btn" id="submit-btn">Continue to App</button>
+                <button type="submit" class="submit-btn" id="submit-btn">Continue</button>
             </form>
 
             <div class="footer-text">
-                <p>New here? <a href="#">Create an account</a></p>
+                <p id="footer-text">Already have an account? <a href="#" onclick="setMode('login')">Login</a></p>
             </div>
         </div>
+    </div>
+
+    <!-- Auth Status Overlay -->
+    <div id="success-overlay" class="success-overlay">
+        <!-- Success Icon -->
+        <div id="success-icon" class="success-circle hidden">
+            <div class="tick-mark"></div>
+        </div>
+        
+        <!-- Failure Icon -->
+        <div id="failure-icon" class="error-circle hidden">
+            <div class="cross-mark"></div>
+        </div>
+
+        <div id="status-text" class="success-text">Authentication Successful</div>
     </div>
 
     <script src="script.js"></script>
